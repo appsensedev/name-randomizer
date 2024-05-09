@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .winner {
+            font-size: 65px;
+            font-weight: bold;
+            color: #9400c1;
+            margin-bottom: 20px;
+        }
+
+        #confetti-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Congratulations!</h1>
+        {% if random_name %}
+        <p class="winner">{{ random_name.firstname }} {{ random_name.lastname }}</p>
+        {% endif %}
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+        const defaults = {
+  spread: 360,
+  ticks: 100,
+  gravity: 0,
+  decay: 0.94,
+  startVelocity: 30,
+};
+
+        function explodeConfetti() {
+            function shoot() {
+  confetti({
+    ...defaults,
+    particleCount: 30,
+    scalar: 1.2,
+    shapes: ["circle", "square"],
+    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+  });
+
+  confetti({
+    ...defaults,
+    particleCount: 20,
+    scalar: 2,
+    shapes: ["emoji"],
+    shapeOptions: {
+      emoji: {
+        value: ["🦄", "🌈"],
+      },
+    },
+  });
+}
+
+setTimeout(shoot, 0);
+setTimeout(shoot, 100);
+setTimeout(shoot, 200);
+        }
+
+        // Call the explodeConfetti function when the page loads or when a certain event occurs
+        window.onload = explodeConfetti;
+    </script>
+</body>
+</html>
