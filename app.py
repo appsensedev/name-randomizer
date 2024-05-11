@@ -17,13 +17,7 @@ def add_name():
     location = request.form['location']
     racfid = request.form['racfid']
     branch = request.form['branch']
-    #name = request.form['name']
-    # firstname = row.get('firstname', '')
-    # lastname = row.get('lastname', '')
-    # location = row.get('location', '')
-    # racfid = row.get('racfid', '')
-    # branch = row.get('branch', '')
-    #names.append(firstname,lastname,location,racfid,branch)
+
     names.append({'firstname': firstname, 'lastname': lastname, 'location': location, 'racfid': racfid, 'branch': branch})
     
     return render_template('index.html', names=names)
@@ -67,3 +61,12 @@ def upload_csv():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+#   _                 __                     
+#  /_\  _ __  _ __   / _\ ___ _ __  ___  ___ 
+# //_\\| '_ \| '_ \  \ \ / _ \ '_ \/ __|/ _ \
+#/  _  \ |_) | |_) | _\ \  __/ | | \__ \  __/
+#\_/ \_/ .__/| .__/  \__/\___|_| |_|___/\___|
+#      |_|   |_|                             
+#

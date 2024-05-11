@@ -29,7 +29,7 @@ if you would like to contribute, please fork the project and submit a P.R., we w
 
 ## Authors
 
-- [@appsense](https://www.github.com/appsense)
+- [@appsensedev](https://www.github.com/appsensedev)
 
 
 ## License
