@@ -15,6 +15,13 @@ To run this project follow these steps:
 
 That is all, this will run the app on http://127.0.0.1:5000, this is where my localhost is running on, the port might vary depending on what port is available on your machine.
 
+## How to use the application
+You can add a list of names by importing a comma separated .csv file or you can add a name by completing the form.
+After that, you click on the pick random name button. Then, this will show on a separate page your winning name with a bit of flare to make it interesting.
+
+![Randomizer website](randomizer.png)
+
+
 This is a free to download tool. I hope you enjoy it.
 
 if you would like to contribute, please fork the project and submit a P.R., we will take a look at it and will merge it in if it makes sense. 
@@ -28,11 +35,6 @@ if you would like to contribute, please fork the project and submit a P.R., we w
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-
-## Badges
-
-Add badges from somewhere like: [shields.io](https://shields.io/)
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
